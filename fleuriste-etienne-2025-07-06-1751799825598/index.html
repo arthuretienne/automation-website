@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleuriste Etienne - Artisan Fleuriste de Qualite</title>
+    <meta name="description" content="Fleuriste Etienne: creations florales uniques, bouquets sur mesure et decorations evenementielles par des artisans passionnes.">
+    
+    <style>
+        :root {
+            --primary: #2E7D32;
+            --secondary: #FFF8E1;
+            --accent: #FF5722;
+            --text: #333333;
+            --light: #FFFFFF;
+            --spacing: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--light);
+            padding: calc(var(--spacing) * 2);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: calc(var(--spacing) * 3);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text);
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(46,125,50,0.1), rgba(46,125,50,0.2));
+            display: flex;
+            align-items: center;
+            padding: calc(var(--spacing) * 8);
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            margin-bottom: calc(var(--spacing) * 3);
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: calc(var(--spacing) * 4);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+            background: var(--primary);
+            color: var(--light);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .services {
+            padding: calc(var(--spacing) * 8);
+            background: var(--secondary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: calc(var(--spacing) * 4);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--light);
+            padding: calc(var(--spacing) * 4);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact {
+            padding: calc(var(--spacing) * 8);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: calc(var(--spacing) * 3);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: calc(var(--spacing) * 1.5);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: calc(var(--spacing) * 4);
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">Fleuriste Etienne</a>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">A propos</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Creations florales d'exception</h1>
+            <p class="hero-subtitle">Des compositions uniques pour tous vos moments importants</p>
+            <a href="#contact" class="btn">Contactez-nous</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Bouquets sur mesure</h3>
+                <p>Creations personnalisees selon vos gouts et occasions</p>
+            </div>
+            <div class="service-card">
+                <h3>Evenements</h3>
+                <p>Decorations florales pour mariages et ceremonies</p>
+            </div>
+            <div class="service-card">
+                <h3>Abonnements</h3>
+                <p>Fleurs fraiches livrees regulierement</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-form">
+            <h2>Contactez-nous</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-input" placeholder="Votre message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
